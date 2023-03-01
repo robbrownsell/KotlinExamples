@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "1.8.0"
+    id("io.gitlab.arturbosch.detekt").version("1.22.0")
     application
 }
 
@@ -10,9 +11,13 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
     testImplementation(kotlin("test"))
+    implementation("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.22.0")
 }
+
+apply(plugin = "io.gitlab.arturbosch.detekt")
 
 tasks.test {
     useJUnitPlatform()
@@ -25,3 +30,4 @@ kotlin {
 application {
     mainClass.set("MainKt")
 }
+
