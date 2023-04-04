@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>NewLineAtEndOfFile:PersonServiceTest.kt$foo.bar.kotlinexamples.service.PersonServiceTest.kt</ID>
+  </CurrentIssues>
+</SmellBaseline>
