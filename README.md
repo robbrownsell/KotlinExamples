@@ -1,3 +1,10 @@
+* Kotlin Demo
+
+Building:
+```shell
+./gradlew clean build
+```
+
 **Title: Unveiling Kotlin: Uses and Benefits**
 **Slide 1: Introduction**
 - Title: Unveiling Kotlin: Uses and Benefits
