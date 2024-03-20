@@ -1,6 +1,7 @@
 package foo.bar.kotlinexamples.service
 
 import foo.bar.kotlinexamples.domain.Person
+import io.kotest.matchers.ints.shouldBeLessThan
 import org.junit.jupiter.api.Test
 import io.kotest.matchers.shouldBe
 
@@ -16,8 +17,9 @@ class PersonServiceTest {
         personService.addPerson(Person(firstName = "Ian", surname = "Green", isHuman = false))
 
         // then
-        val people = personService.findPeople("Green")
+        val people = personService.findPeopleWithSurname("Green")
         people.size shouldBe 2
+        people.size shouldBeLessThan 3
     }
 
     @Test
@@ -30,7 +32,7 @@ class PersonServiceTest {
         personService.addPerson(Person(firstName = "Ian", surname = "Green", isHuman = false))
 
         // then
-        val people = personService.findPeople("Green")
+        val people = personService.findPeopleWithSurname("Green")
         people.size shouldBe 2
     }
 
